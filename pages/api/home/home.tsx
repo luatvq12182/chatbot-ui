@@ -92,7 +92,37 @@ const Home = ({
   );
 
   useEffect(() => {
-    if (data) dispatch({ field: 'models', value: data });
+    // if (data) dispatch({ field: 'models', value: data });
+    if (data)
+      dispatch({
+        field: 'models',
+        value: [
+          {
+            id: 'gpt-4',
+            name: 'gpt-4',
+            maxLength: 4096,
+            tokenLimit: 60000,
+          },
+          {
+            id: 'gpt-4-1106-preview',
+            name: 'gpt-4-1106-preview',
+            maxLength: 4096,
+            tokenLimit: 60000,
+          },
+          {
+            id: 'gpt-4-0613',
+            name: 'gpt-4-0613',
+            maxLength: 4096,
+            tokenLimit: 60000,
+          },
+          {
+            id: 'gpt-4-0314',
+            name: 'gpt-4-0314',
+            maxLength: 4096,
+            tokenLimit: 60000,
+          },
+        ],
+      });
   }, [data, dispatch]);
 
   useEffect(() => {
